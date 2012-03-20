@@ -16,6 +16,9 @@
 		6167214A15188D4500550F9C /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6167214815188D4500550F9C /* MainStoryboard.storyboard */; };
 		6167214D15188D4500550F9C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6167214C15188D4500550F9C /* ViewController.m */; };
 		6167215515188D6F00550F9C /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6167215415188D6F00550F9C /* Connection.m */; };
+		6167215B1518918000550F9C /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 616721571518918000550F9C /* CHANGELOG.md */; };
+		6167215C1518918000550F9C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 616721591518918000550F9C /* JSONKit.m */; };
+		6167215D1518918000550F9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6167215A1518918000550F9C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,10 @@
 		6167214C15188D4500550F9C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6167215315188D6F00550F9C /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
 		6167215415188D6F00550F9C /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		616721571518918000550F9C /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		616721581518918000550F9C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		616721591518918000550F9C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		6167215A1518918000550F9C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +60,7 @@
 		6167212715188D4500550F9C = {
 			isa = PBXGroup;
 			children = (
+				616721561518918000550F9C /* JSONKit */,
 				6167213C15188D4500550F9C /* ContestBot */,
 				6167213515188D4500550F9C /* Frameworks */,
 				6167213315188D4500550F9C /* Products */,
@@ -101,6 +109,17 @@
 				6167214415188D4500550F9C /* ContestBot-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		616721561518918000550F9C /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				616721571518918000550F9C /* CHANGELOG.md */,
+				616721581518918000550F9C /* JSONKit.h */,
+				616721591518918000550F9C /* JSONKit.m */,
+				6167215A1518918000550F9C /* README.md */,
+			);
+			path = JSONKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +174,8 @@
 			files = (
 				6167214115188D4500550F9C /* InfoPlist.strings in Resources */,
 				6167214A15188D4500550F9C /* MainStoryboard.storyboard in Resources */,
+				6167215B1518918000550F9C /* CHANGELOG.md in Resources */,
+				6167215D1518918000550F9C /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +190,7 @@
 				6167214715188D4500550F9C /* AppDelegate.m in Sources */,
 				6167214D15188D4500550F9C /* ViewController.m in Sources */,
 				6167215515188D6F00550F9C /* Connection.m in Sources */,
+				6167215C1518918000550F9C /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
