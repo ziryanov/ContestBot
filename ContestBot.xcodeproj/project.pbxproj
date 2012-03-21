@@ -19,6 +19,8 @@
 		6167215B1518918000550F9C /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 616721571518918000550F9C /* CHANGELOG.md */; };
 		6167215C1518918000550F9C /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 616721591518918000550F9C /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6167215D1518918000550F9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 6167215A1518918000550F9C /* README.md */; };
+		616722BD151895AD00550F9C /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 61672209151895AC00550F9C /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		616723001518964200550F9C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 616722FF1518964200550F9C /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,9 @@
 		616721581518918000550F9C /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		616721591518918000550F9C /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		6167215A1518918000550F9C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		61672208151895AC00550F9C /* AsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncSocket.h; sourceTree = "<group>"; };
+		61672209151895AC00550F9C /* AsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncSocket.m; sourceTree = "<group>"; };
+		616722FF1518964200550F9C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				616723001518964200550F9C /* CFNetwork.framework in Frameworks */,
 				6167213715188D4500550F9C /* UIKit.framework in Frameworks */,
 				6167213915188D4500550F9C /* Foundation.framework in Frameworks */,
 				6167213B15188D4500550F9C /* CoreGraphics.framework in Frameworks */,
@@ -60,6 +66,7 @@
 		6167212715188D4500550F9C = {
 			isa = PBXGroup;
 			children = (
+				6167215E151895AC00550F9C /* CocoaAsyncSocket */,
 				616721561518918000550F9C /* JSONKit */,
 				6167213C15188D4500550F9C /* ContestBot */,
 				6167213515188D4500550F9C /* Frameworks */,
@@ -78,6 +85,7 @@
 		6167213515188D4500550F9C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				616722FF1518964200550F9C /* CFNetwork.framework */,
 				6167213615188D4500550F9C /* UIKit.framework */,
 				6167213815188D4500550F9C /* Foundation.framework */,
 				6167213A15188D4500550F9C /* CoreGraphics.framework */,
@@ -122,6 +130,23 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		6167215E151895AC00550F9C /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				61672207151895AC00550F9C /* RunLoop */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		61672207151895AC00550F9C /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				61672208151895AC00550F9C /* AsyncSocket.h */,
+				61672209151895AC00550F9C /* AsyncSocket.m */,
+			);
+			path = RunLoop;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +181,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 6167212715188D4500550F9C;
 			productRefGroup = 6167213315188D4500550F9C /* Products */;
@@ -191,6 +217,7 @@
 				6167214D15188D4500550F9C /* ViewController.m in Sources */,
 				6167215515188D6F00550F9C /* Connection.m in Sources */,
 				6167215C1518918000550F9C /* JSONKit.m in Sources */,
+				616722BD151895AD00550F9C /* AsyncSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

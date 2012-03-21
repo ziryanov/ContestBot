@@ -8,14 +8,32 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol ConnectionDelegate <NSObject>
+
+- (void)fieldReceived:(NSDictionary*)field;
+- (void)turnReceived:(NSDictionary*)field;
+
+@end
+
+@class AsyncSocket;
 @interface Connection : NSObject
 
 + (id)shared;
 
-- (void)start;
+@property (nonatomic, weak) id<ConnectionDelegate> delegate;
+
+- (void)connect;
+typedef enum
+{
+    MoveStay = 0,
+    MoveUp,
+    MoveDown,
+    MoveLeft,
+    MoveRight
+} Moves;
+- (void)sendMove:(Moves)move;
 
 //private
-@property (nonatomic, strong) NSURLConnection* connection;
-@property (nonatomic, strong) NSMutableData* receivedData;
+@property (nonatomic, strong) AsyncSocket* socket;
 
 @end
